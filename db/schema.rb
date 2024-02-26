@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_26_192706) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_26_212218) do
+  create_table "cards", force: :cascade do |t|
+    t.integer "lobby_id", null: false
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lobby_id"], name: "index_cards_on_lobby_id"
+  end
+
   create_table "lobbies", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -25,5 +33,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_192706) do
     t.index ["lobby_id"], name: "index_tiles_on_lobby_id"
   end
 
+  add_foreign_key "cards", "lobbies"
   add_foreign_key "tiles", "lobbies"
 end

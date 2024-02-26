@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :lobbies do
     resources :tiles
+    resources :cards
   end
 
 

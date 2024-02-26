@@ -3,6 +3,7 @@
 <%= render @lobby %>
 
 <div>
+  <%= link_to "Show cards", lobby_cards_path(@lobby) %> |
   <%= link_to "Edit this lobby", edit_lobby_path(@lobby) %> |
   <%= link_to "Back to lobbies", lobbies_path %>
 
