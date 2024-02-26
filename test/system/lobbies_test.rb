@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class LobbiesTest < ApplicationSystemTestCase
   setup do
-    @lobby = lobbies(:one)
+    @lobby = lobbies(:two)
   end
 
   test "visiting the index" do

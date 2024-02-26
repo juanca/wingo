@@ -2,7 +2,7 @@ require "test_helper"
 
 class LobbiesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @lobby = lobbies(:one)
+    @lobby = lobbies(:two)
   end
 
   test "should get index" do

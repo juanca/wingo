@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :lobbies
+  resources :lobbies do
+    resources :tiles
+  end
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
