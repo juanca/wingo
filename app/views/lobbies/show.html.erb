@@ -3,7 +3,11 @@
 <%= render @lobby %>
 
 <div>
-  <%= link_to "Show cards", lobby_cards_path(@lobby) %> |
+  <% if @lobby.tiles.count < 24 %>
+    Lobby requires more tiles! |
+  <% else %>
+    <%= link_to "Show cards", lobby_cards_path(@lobby) %> |
+  <% end %>
   <%= link_to "Edit this lobby", edit_lobby_path(@lobby) %> |
   <%= link_to "Back to lobbies", lobbies_path %>
 
