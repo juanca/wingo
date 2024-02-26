@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: ruby:latest
+    volumes:
+      - .:/root/wingo
+      - bundle:/usr/local/bundle
+    working_dir: "/root/wingo"
+volumes:
+  bundle:
