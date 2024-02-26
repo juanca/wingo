@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Play your own variant of bingo with your friends without having to print anything! #savethetrees
 
-Things you may want to cover:
+1. Create a new lobby
+2. Set up a collection of bingo tiles
+3. Invite your friends!
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Your friends will get to choose their own randomly generated bingo card. 
+Progress is saved as you play. 
+First to bingo wins!
