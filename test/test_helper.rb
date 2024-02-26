@@ -11,5 +11,10 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+
+    # Capybara settings for docker
+    Capybara.server_host = "0.0.0.0"
+    Capybara.app_host = "http://#{ENV.fetch("HOSTNAME")}:#{Capybara.server_port}"
+    Capybara.enable_aria_label = true
   end
 end

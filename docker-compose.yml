@@ -9,5 +9,11 @@ services:
       - .:/root/wingo
       - bundle:/usr/local/bundle
     working_dir: "/root/wingo"
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: "2g"
 volumes:
   bundle:
