@@ -2,7 +2,7 @@ require "test_helper"
 
 class TilesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @tile = tiles(:one)
+    @tile = tiles(:two)
   end
 
   test "should get index" do

@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class TilesTest < ApplicationSystemTestCase
   setup do
-    @tile = tiles(:one)
+    @tile = tiles(:two)
   end
 
   test "visiting the index" do
