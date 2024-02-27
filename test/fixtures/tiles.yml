@@ -2,4 +2,96 @@
 
 one:
   lobby: one
-  body: MyString
+  body: 1
+
+two:
+  lobby: one
+  body: 2
+
+three:
+  lobby: one
+  body: 3
+
+four:
+  lobby: one
+  body: 4
+
+five:
+  lobby: one
+  body: 5
+
+six:
+  lobby: one
+  body: 6
+
+seven:
+  lobby: one
+  body: 7
+
+eight:
+  lobby: one
+  body: 8
+
+nine:
+  lobby: one
+  body: 9
+
+ten:
+  lobby: one
+  body: 10
+
+eleven:
+  lobby: one
+  body: 11
+
+twelve:
+  lobby: one
+  body: 12
+
+thirteen:
+  lobby: one
+  body: 13
+
+fourteen:
+  lobby: one
+  body: 14
+
+fifteen:
+  lobby: one
+  body: 15
+
+sixteen:
+  lobby: one
+  body: 16
+
+seventeen:
+  lobby: one
+  body: 17
+
+eighteen:
+  lobby: one
+  body: 18
+
+nineteen:
+  lobby: one
+  body: 19
+
+twenty:
+  lobby: one
+  body: 20
+
+twenty-one:
+  lobby: one
+  body: 21
+
+twenty-two:
+  lobby: one
+  body: 22
+
+twenty-three:
+  lobby: one
+  body: 23
+
+twenty-four:
+  lobby: one
+  body: 24
