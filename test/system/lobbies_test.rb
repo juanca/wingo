@@ -34,6 +34,7 @@ class LobbiesTest < ApplicationSystemTestCase
 
   test "should destroy Lobby" do
     visit lobby_url(@lobby)
+    click_on "Edit this lobby", match: :first
     click_on "Destroy this lobby", match: :first
 
     assert_text "Lobby was successfully destroyed"

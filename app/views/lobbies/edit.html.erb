@@ -7,5 +7,5 @@
 <div>
   <%= link_to "Show this lobby", @lobby %> |
   <%= link_to "Show tiles", lobby_tiles_path(@lobby) %> |
-  <%= link_to "Back to lobbies", lobbies_path %>
+  <%= button_to "Destroy this lobby", @lobby, method: :delete %>
 </div>
