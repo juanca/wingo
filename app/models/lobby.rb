@@ -1,4 +1,4 @@
 class Lobby < ApplicationRecord
-  has_many :cards
-  has_many :tiles
+  has_many :cards, dependent: :destroy
+  has_many :tiles, dependent: :destroy
 end
