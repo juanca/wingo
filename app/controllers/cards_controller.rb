@@ -40,7 +40,7 @@ class CardsController < ApplicationController
   # PATCH/PUT /cards/1 or /cards/1.json
   def update
     respond_to do |format|
-      if @card.update(card_params)
+      if @card.update(card_params.except(:card_tiles_attributes))
         format.html { redirect_to lobby_card_url(@lobby, @card), notice: "Card was successfully updated." }
         format.json { render :show, status: :ok, location: @card }
       else
