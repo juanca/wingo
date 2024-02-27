@@ -14,6 +14,8 @@ class CardsController < ApplicationController
   # GET /cards/new
   def new
     @card = Card.new
+    sampled_tiles = @lobby.tiles.sample(24)
+    @card.tiles = sampled_tiles.slice(0, 12) + [Tile.new(body: "FREE")] +  sampled_tiles.slice(12..)
   end
 
   # GET /cards/1/edit
