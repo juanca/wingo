@@ -1,13 +1,31 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @lobby %>
+<div id="<%= dom_id @lobby %>">
+  <p>
+    <strong>Lobby name:</strong>
+    <%= @lobby.title %>
+  </p>
 
-<div>
+  <p>Players: <%= @lobby.cards.count %></p>
+</div>
+
+<ul>
+  <% @lobby.cards.each do |card| %>
+    <li>
+      <%= link_to card.title, [@lobby, card] %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
   <% if @lobby.tiles.count < 24 %>
     Lobby requires more tiles! |
   <% else %>
-    <%= link_to "Show cards", lobby_cards_path(@lobby) %> |
+    <%= link_to "Join the game!", new_lobby_card_path(@lobby) %>
   <% end %>
+</p>
+
+<div>
   <%= link_to "Edit this lobby", edit_lobby_path(@lobby) %> |
   <%= link_to "Back to lobbies", lobbies_path %>
 
