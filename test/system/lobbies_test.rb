@@ -7,7 +7,7 @@ class LobbiesTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit lobbies_url
-    assert_selector "h1", text: "Lobbies"
+    assert_selector "table", id: "lobbies"
   end
 
   test "should create lobby" do

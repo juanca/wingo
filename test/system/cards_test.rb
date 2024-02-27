@@ -5,14 +5,9 @@ class CardsTest < ApplicationSystemTestCase
     @card = cards(:one)
   end
 
-  test "visiting the index" do
-    visit lobby_cards_url(@card.lobby)
-    assert_selector "h1", text: "Cards"
-  end
-
   test "should create card" do
-    visit lobby_cards_url(@card.lobby)
-    click_on "New card"
+    visit lobby_url(@card.lobby)
+    click_on "Join the game!"
 
     fill_in "Title", with: @card.title
     click_on "Create Card"

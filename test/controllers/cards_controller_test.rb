@@ -5,11 +5,6 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
     @card = cards(:one)
   end
 
-  test "should get index" do
-    get lobby_cards_url(@card.lobby)
-    assert_response :success
-  end
-
   test "should get new" do
     get new_lobby_card_url(@card.lobby)
     assert_response :success
@@ -43,6 +38,6 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
       delete lobby_card_url(@card.lobby, @card)
     end
 
-    assert_redirected_to lobby_cards_url(@card.lobby)
+    assert_redirected_to lobby_url(@card.lobby)
   end
 end
