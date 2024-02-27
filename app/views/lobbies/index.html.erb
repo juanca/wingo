@@ -1,14 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Lobbies</h1>
+<table id="lobbies">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cards</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @lobbies.each do |lobby| %>
+        <tr>
+            <td><%= lobby.title %></td>
+            <td><%= lobby.cards.count %></td>
+            <td><%= link_to "Join", lobby %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
 
-<div id="lobbies">
-  <% @lobbies.each do |lobby| %>
-    <%= render lobby %>
-    <p>
-      <%= link_to "Show this lobby", lobby %>
-    </p>
-  <% end %>
-</div>
+<br>
 
 <%= link_to "New lobby", new_lobby_path %>

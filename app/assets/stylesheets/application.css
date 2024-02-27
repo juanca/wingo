@@ -22,3 +22,16 @@ header {
   font-size: 2rem;
   border-style: none none double none;
 }
+
+#lobbies {
+  border-collapse: collapse;
+  width: 100%;
+
+  & th {
+    border: 1px solid black;
+  }
+
+  & td {
+    border: 1px solid black;
+  }
+}
