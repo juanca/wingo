@@ -1,7 +1,7 @@
 <div id="<%= dom_id card %>">
   <p>
     <strong>Lobby:</strong>
-    <%= card.lobby.title %>
+    <%= link_to card.lobby.title, lobby_path(card.lobby) %>
   </p>
 
   <p>
