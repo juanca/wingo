@@ -14,8 +14,8 @@ class CardsController < ApplicationController
   # GET /cards/new
   def new
     @card = Card.new
-    sampled_tiles = @lobby.tiles.sample(24)
-    @card.tiles = sampled_tiles.slice(0, 12) + [Tile.new(body: "FREE")] +  sampled_tiles.slice(12..)
+    sampled_tiles = @lobby.tiles.where.not(body: "FREE").sample(24)
+    @card.tiles = sampled_tiles.slice(0, 12) + [@lobby.tiles.find_by!(body: "FREE")] +  sampled_tiles.slice(12..)
   end
 
   # GET /cards/1/edit
@@ -72,6 +72,6 @@ class CardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def card_params
-      params.require(:card).permit(:lobby_id, :title)
+      params.require(:card).permit(:title, card_tiles_attributes: [:tile_id])
     end
 end
