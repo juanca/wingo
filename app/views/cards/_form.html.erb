@@ -16,6 +16,10 @@
     <%= form.text_field :title %>
   </div>
 
+  <%= form.fields_for :card_tiles do |card_tiles_form| %>
+    <%= card_tiles_form.hidden_field :tile_id %>
+  <% end %>
+
   <div>
     <%= form.submit %>
   </div>
