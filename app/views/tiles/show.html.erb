@@ -4,7 +4,7 @@
 
 <div>
   <%= link_to "Edit this tile", edit_lobby_tile_path(@lobby, @tile) %> |
-  <%= link_to "Back to tiles", lobby_tiles_path %>
+  <%= link_to "Back to edit lobby", edit_lobby_path(@lobby) %>
 
   <%= button_to "Destroy this tile", [@lobby, @tile], method: :delete %>
 </div>

@@ -5,11 +5,6 @@ class TilesControllerTest < ActionDispatch::IntegrationTest
     @tile = tiles(:two)
   end
 
-  test "should get index" do
-    get lobby_tiles_url(@tile.lobby)
-    assert_response :success
-  end
-
   test "should get new" do
     get new_lobby_tile_url(@tile.lobby)
     assert_response :success
@@ -17,10 +12,10 @@ class TilesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tile" do
     assert_difference("Tile.count") do
-      post lobby_tiles_url(@tile.lobby), params: { tile: { body: @tile.body, lobby_id: @tile.lobby_id } }
+      post lobby_tiles_url(@tile.lobby), params: { tile: { body: @tile.body } }
     end
 
-    assert_redirected_to lobby_tile_url(@tile.lobby, Tile.last)
+    assert_redirected_to edit_lobby_url(@tile.lobby)
   end
 
   test "should show tile" do
@@ -35,7 +30,7 @@ class TilesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update tile" do
     patch lobby_tile_url(@tile.lobby, @tile), params: { tile: { body: @tile.body, lobby_id: @tile.lobby_id } }
-    assert_redirected_to lobby_tile_url(@tile.lobby, @tile)
+    assert_redirected_to edit_lobby_url(@tile.lobby)
   end
 
   test "should destroy tile" do
@@ -43,6 +38,6 @@ class TilesControllerTest < ActionDispatch::IntegrationTest
       delete lobby_tile_url(@tile.lobby, @tile)
     end
 
-    assert_redirected_to lobby_tiles_url
+    assert_redirected_to edit_lobby_url(@tile.lobby)
   end
 end

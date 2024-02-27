@@ -1,11 +1,25 @@
 <h1>Editing lobby</h1>
 
+<p style="color: green"><%= notice %></p>
+
 <%= render "form", lobby: @lobby %>
 
 <br>
 
 <div>
   <%= link_to "Show this lobby", @lobby %> |
-  <%= link_to "Show tiles", lobby_tiles_path(@lobby) %> |
   <%= button_to "Destroy this lobby", @lobby, method: :delete %>
+</div>
+
+<div id="tiles">
+  <% @lobby.tiles.each do |tile| %>
+    <%= render tile %>
+    <p>
+      <%= link_to "Show this tile", [@lobby, tile] %>
+    </p>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "New tile", new_lobby_tile_path(@lobby) %>
 </div>

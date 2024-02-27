@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :lobbies do
-    resources :tiles
+    resources :tiles, except: [:index]
     resources :cards, except: [:index]
   end
 

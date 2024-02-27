@@ -2,11 +2,6 @@ class TilesController < ApplicationController
   before_action :set_lobby
   before_action :set_tile, only: %i[ show edit update destroy ]
 
-  # GET /tiles or /tiles.json
-  def index
-    @tiles = Tile.all
-  end
-
   # GET /tiles/1 or /tiles/1.json
   def show
   end
@@ -26,7 +21,7 @@ class TilesController < ApplicationController
 
     respond_to do |format|
       if @tile.save
-        format.html { redirect_to lobby_tile_url(@lobby, @tile), notice: "Tile was successfully created." }
+        format.html { redirect_to edit_lobby_url(@lobby), notice: "Tile was successfully created." }
         format.json { render :show, status: :created, location: @tile }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +34,7 @@ class TilesController < ApplicationController
   def update
     respond_to do |format|
       if @tile.update(tile_params)
-        format.html { redirect_to lobby_tile_url(@lobby, @tile), notice: "Tile was successfully updated." }
+        format.html { redirect_to edit_lobby_url(@lobby), notice: "Tile was successfully updated." }
         format.json { render :show, status: :ok, location: @tile }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +48,7 @@ class TilesController < ApplicationController
     @tile.destroy!
 
     respond_to do |format|
-      format.html { redirect_to lobby_tiles_url, notice: "Tile was successfully destroyed." }
+      format.html { redirect_to edit_lobby_url(@lobby), notice: "Tile was successfully destroyed." }
       format.json { head :no_content }
     end
   end
