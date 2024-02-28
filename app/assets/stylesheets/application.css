@@ -14,13 +14,12 @@
  *= require_self
  */
 
-header {
+h1 {
+  align-items: center;
+  border-style: none none double none;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: 3rem;
-  font-size: 2rem;
-  border-style: none none double none;
+  margin: 0;
 }
 
 .actions {
