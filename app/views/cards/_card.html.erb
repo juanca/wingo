@@ -1,4 +1,4 @@
-<div id="<%= dom_id card %>">
+<header id="<%= dom_id card %>">
   <p>
     <strong>Lobby:</strong>
     <%= link_to card.lobby.title, lobby_path(card.lobby) %>
@@ -9,5 +9,7 @@
     <%= card.title %>
   </p>
 
-  <%= render "tiles", tiles: card.tiles %>
-</div>
+  <%= button_to "Edit", edit_lobby_card_path(@lobby, @card), method: :get %>
+</header>
+
+<%= render "tiles", tiles: card.tiles %>

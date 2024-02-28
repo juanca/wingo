@@ -17,7 +17,7 @@ class CardsTest < ApplicationSystemTestCase
 
   test "should update Card" do
     visit lobby_card_url(@card.lobby, @card)
-    click_on "Edit this card", match: :first
+    click_on "Edit", match: :first
 
     fill_in "Title", with: @card.title
     click_on "Update Card"
@@ -27,7 +27,7 @@ class CardsTest < ApplicationSystemTestCase
 
   test "should destroy Card" do
     visit lobby_card_url(@card.lobby, @card)
-    click_on "Edit this card", match: :first
+    click_on "Edit", match: :first
     click_on "Destroy this card", match: :first
 
     assert_text "Card was successfully destroyed"
