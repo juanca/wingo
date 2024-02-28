@@ -1,4 +1,4 @@
-<%= form_with(model: lobby) do |form| %>
+<%= form_with(model: lobby, id: "lobby_form") do |form| %>
   <% if lobby.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(lobby.errors.count, "error") %> prohibited this lobby from being saved:</h2>
@@ -14,9 +14,5 @@
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.submit %>
   </div>
 <% end %>

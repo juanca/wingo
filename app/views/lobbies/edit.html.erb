@@ -4,11 +4,10 @@
 
 <%= render "form", lobby: @lobby %>
 
-<br>
-
-<div>
-  <%= link_to "Show this lobby", @lobby %> |
-  <%= button_to "Destroy this lobby", @lobby, method: :delete %>
+<div class="actions">
+  <%= button_tag "Update", form: "lobby_form" %>
+  <%= button_to "Destroy", @lobby, method: :delete %>
+  <%= button_to "Cancel", @lobby, method: :get %>
 </div>
 
 <h2>Tiles availables for new cards:</h2>

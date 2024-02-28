@@ -2,7 +2,9 @@
 
 <%= render "form", lobby: @lobby %>
 
-<br>
+<div class="actions">
+  <%= button_tag "Create", form: "lobby_form" %>
+</div>
 
 <div>
   <%= link_to "Back to lobbies", lobbies_path %>

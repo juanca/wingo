@@ -15,10 +15,9 @@ class LobbiesTest < ApplicationSystemTestCase
     click_on "New lobby"
 
     fill_in "Title", with: @lobby.title
-    click_on "Create Lobby"
+    click_on "Create"
 
     assert_text "Lobby was successfully created"
-    click_on "Back"
   end
 
   test "should update Lobby" do
@@ -26,16 +25,15 @@ class LobbiesTest < ApplicationSystemTestCase
     click_on "Edit this lobby", match: :first
 
     fill_in "Title", with: @lobby.title
-    click_on "Update Lobby"
+    click_on "Update"
 
     assert_text "Lobby was successfully updated"
-    click_on "Back"
   end
 
   test "should destroy Lobby" do
     visit lobby_url(@lobby)
     click_on "Edit this lobby", match: :first
-    click_on "Destroy this lobby", match: :first
+    click_on "Destroy", match: :first
 
     assert_text "Lobby was successfully destroyed"
   end

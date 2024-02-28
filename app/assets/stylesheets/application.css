@@ -23,6 +23,12 @@ header {
   border-style: none none double none;
 }
 
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
 #lobbies {
   border-collapse: collapse;
   width: 100%;
