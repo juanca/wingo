@@ -1,13 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<div id="<%= dom_id @lobby %>">
+<div class="lobby" id="<%= dom_id @lobby %>">
   <p>
     <strong>Lobby name:</strong>
     <%= @lobby.title %>
   </p>
-
-  <p>Players: <%= @lobby.cards.count %></p>
+  <%= button_to "Edit", edit_lobby_path(@lobby), method: :get %>
+  <%= button_to "Exit", lobbies_path(@lobby), method: :get %>
 </div>
+
+<p>Players: <%= @lobby.cards.count %></p>
 
 <ul>
   <% @lobby.cards.each do |card| %>
@@ -24,8 +26,3 @@
     <%= link_to "Join the game!", new_lobby_card_path(@lobby) %>
   <% end %>
 </p>
-
-<div>
-  <%= link_to "Edit this lobby", edit_lobby_path(@lobby) %> |
-  <%= link_to "Back to lobbies", lobbies_path %>
-</div>

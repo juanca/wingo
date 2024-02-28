@@ -22,7 +22,7 @@ class LobbiesTest < ApplicationSystemTestCase
 
   test "should update Lobby" do
     visit lobby_url(@lobby)
-    click_on "Edit this lobby", match: :first
+    click_on "Edit", match: :first
 
     fill_in "Title", with: @lobby.title
     click_on "Update"
@@ -32,7 +32,7 @@ class LobbiesTest < ApplicationSystemTestCase
 
   test "should destroy Lobby" do
     visit lobby_url(@lobby)
-    click_on "Edit this lobby", match: :first
+    click_on "Edit", match: :first
     click_on "Destroy", match: :first
 
     assert_text "Lobby was successfully destroyed"
