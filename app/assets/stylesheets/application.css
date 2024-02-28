@@ -34,16 +34,40 @@ header {
   margin: 1rem 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 #lobbies {
-  border-collapse: collapse;
-  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
 
-  & th {
+  & li {
+    background-color: aliceblue;
     border: 1px solid black;
-  }
+    border-radius: 3px;
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: subgrid;
+    padding: 0.5rem;
 
-  & td {
-    border: 1px solid black;
+    & b {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    & i {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    & form {
+      grid-column: 2;
+      grid-row: 1 / 2;
+    }
   }
 }
 
