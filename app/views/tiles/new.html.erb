@@ -2,8 +2,7 @@
 
 <%= render "form", tile: @tile %>
 
-<br>
-
-<div>
-  <%= link_to "Back to edit lobby", edit_lobby_path(@lobby) %>
+<div class="actions">
+  <%= button_tag "Create", form: "form" %>
+  <%= button_to "Cancel", edit_lobby_path(@lobby), method: :get %>
 </div>
