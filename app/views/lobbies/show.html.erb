@@ -1,13 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="lobby" id="<%= dom_id @lobby %>">
+<header id="<%= dom_id @lobby %>">
   <p>
     <strong>Lobby name:</strong>
     <%= @lobby.title %>
   </p>
   <%= button_to "Edit", edit_lobby_path(@lobby), method: :get %>
   <%= button_to "Exit", lobbies_path(@lobby), method: :get %>
-</div>
+</header>
 
 <p>Players: <%= @lobby.cards.count %></p>
 

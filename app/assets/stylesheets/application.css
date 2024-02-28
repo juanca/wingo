@@ -22,6 +22,12 @@ h1 {
   margin: 0;
 }
 
+header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .actions {
   display: flex;
   gap: 1rem;
@@ -39,12 +45,6 @@ h1 {
   & td {
     border: 1px solid black;
   }
-}
-
-.lobby {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
 }
 
 #tiles {
