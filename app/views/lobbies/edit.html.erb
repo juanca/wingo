@@ -14,7 +14,7 @@
 
 <div id="tiles">
   <% @lobby.tiles.each do |tile| %>
-    <%= link_to [@lobby, tile] do %>
+    <%= link_to edit_lobby_tile_path(@lobby, tile) do %>
       <%= render tile %>
     <% end %>
   <% end %>

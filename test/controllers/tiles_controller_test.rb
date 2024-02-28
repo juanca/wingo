@@ -18,11 +18,6 @@ class TilesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to edit_lobby_url(@tile.lobby)
   end
 
-  test "should show tile" do
-    get lobby_tile_url(@tile.lobby, @tile)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_lobby_tile_url(@tile.lobby, @tile)
     assert_response :success

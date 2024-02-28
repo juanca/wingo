@@ -16,8 +16,8 @@ class TilesTest < ApplicationSystemTestCase
   end
 
   test "should update Tile" do
-    visit lobby_tile_url(@tile.lobby, @tile)
-    click_on "Edit this tile", match: :first
+    visit edit_lobby_url(@tile.lobby)
+    click_on @tile.body, match: :first
 
     fill_in "Body", with: @tile.body
     click_on "Update Tile"
@@ -26,7 +26,7 @@ class TilesTest < ApplicationSystemTestCase
   end
 
   test "should destroy Tile" do
-    visit lobby_tile_url(@tile.lobby, @tile)
+    visit edit_lobby_tile_url(@tile.lobby, @tile)
     click_on "Destroy this tile", match: :first
 
     assert_text "Tile was successfully destroyed"

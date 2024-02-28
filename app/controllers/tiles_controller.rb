@@ -1,10 +1,6 @@
 class TilesController < ApplicationController
   before_action :set_lobby
-  before_action :set_tile, only: %i[ show edit update destroy ]
-
-  # GET /tiles/1 or /tiles/1.json
-  def show
-  end
+  before_action :set_tile, only: %i[ edit update destroy ]
 
   # GET /tiles/new
   def new

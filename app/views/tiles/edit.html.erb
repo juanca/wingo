@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this tile", [@lobby, @tile] %> |
   <%= link_to "Back to edit lobby", edit_lobby_path(@lobby) %>
+  <%= button_to "Destroy this tile", [@lobby, @tile], method: :delete %>
 </div>
