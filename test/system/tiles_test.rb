@@ -7,7 +7,7 @@ class TilesTest < ApplicationSystemTestCase
 
   test "should create tile" do
     visit edit_lobby_url(@tile.lobby)
-    click_on "New tile"
+    click_on "Add new tile"
 
     fill_in "Body", with: @tile.body
     click_on "Create Tile"

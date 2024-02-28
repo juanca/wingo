@@ -11,15 +11,15 @@
   <%= button_to "Destroy this lobby", @lobby, method: :delete %>
 </div>
 
+<h2>Tiles availables for new cards:</h2>
+
 <div id="tiles">
   <% @lobby.tiles.each do |tile| %>
-    <%= render tile %>
-    <p>
-      <%= link_to "Show this tile", [@lobby, tile] %>
-    </p>
+    <%= link_to [@lobby, tile] do %>
+      <%= render tile %>
+    <% end %>
   <% end %>
-</div>
-
-<div>
-  <%= link_to "New tile", new_lobby_tile_path(@lobby) %>
+  <%= link_to new_lobby_tile_path(@lobby) do %>
+    <div class="new tile">Add new tile</div>
+  <% end %>
 </div>
