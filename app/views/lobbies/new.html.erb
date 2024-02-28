@@ -3,9 +3,6 @@
 <%= render "form", lobby: @lobby %>
 
 <div class="actions">
-  <%= button_tag "Create", form: "lobby_form" %>
-</div>
-
-<div>
-  <%= link_to "Back to lobbies", lobbies_path %>
+  <%= button_tag "Create", form: "form" %>
+  <%= button_to "Cancel", lobbies_path, method: :get %>
 </div>
