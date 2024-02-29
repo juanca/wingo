@@ -103,3 +103,17 @@ ul {
   text-align: center;
   width: 75px;
 }
+
+#card {
+  align-items: center;
+  background-color: mintcream;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "B I N G O";
+  justify-items: center;
+  padding: 1rem;
+  width: fit-content;
+}

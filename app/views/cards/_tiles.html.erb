@@ -1,26 +1,12 @@
-<table>
-  <thead>
-  <tr>
-    <th style="border: 1px solid black;">B</th>
-    <th style="border: 1px solid black;">I</th>
-    <th style="border: 1px solid black;">N</th>
-    <th style="border: 1px solid black;">G</th>
-    <th style="border: 1px solid black;">O</th>
-  </tr>
-  </thead>
-  <tbody>
+<div id="card">
+  <div>B</div>
+  <div>I</div>
+  <div>N</div>
+  <div>G</div>
+  <div>O</div>
   <% tiles.each.with_index do |tile, index| %>
-    <% if (index + 1) % 5 === 1 %>
-      <tr>
-    <% end %>
-
-    <td style="border: 1px solid black; height: 90px; text-align: center; width: 90px;">
+    <div class="tile">
       <%= tile.body %>
-    </td>
-
-    <% if (index + 1) % 5 === 5 %>
-      </tr>
-    <% end %>
+    </div>
   <% end %>
-  </tbody>
-</table>
+</div>
