@@ -6,8 +6,6 @@
   <%= button_to "Cancel", @lobby, method: :get %>
 <% end %>
 
-<h2>Tiles availables for new cards:</h2>
-
 <div id="tiles">
   <% @lobby.tiles.each do |tile| %>
     <%= link_to edit_lobby_tile_path(@lobby, tile) do %>

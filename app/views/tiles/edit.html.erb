@@ -1,9 +1,7 @@
 <h2>Editing tile</h2>
 
-<%= render "form", tile: @tile %>
-
-<div class="actions">
+<%= render "form", tile: @tile do %>
   <%= button_tag "Update", form: "form" %>
   <%= button_to "Destroy", [@lobby, @tile], method: :delete %>
   <%= button_to "Cancel", edit_lobby_path(@lobby), method: :get %>
-</div>
+<% end %>

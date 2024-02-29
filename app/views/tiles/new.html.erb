@@ -1,8 +1,6 @@
 <h2>New tile</h2>
 
-<%= render "form", tile: @tile %>
-
-<div class="actions">
+<%= render "form", tile: @tile do %>
   <%= button_tag "Create", form: "form" %>
   <%= button_to "Cancel", edit_lobby_path(@lobby), method: :get %>
-</div>
+<% end %>
