@@ -20,7 +20,7 @@ class LobbiesControllerTest < ActionDispatch::IntegrationTest
       post lobbies_url, params: { lobby: { title: @lobby.title } }
     end
 
-    assert_redirected_to lobby_url(Lobby.last)
+    assert_redirected_to edit_lobby_url(Lobby.last)
   end
 
   test "should show lobby" do

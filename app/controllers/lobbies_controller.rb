@@ -25,7 +25,7 @@ class LobbiesController < ApplicationController
 
     respond_to do |format|
       if @lobby.save
-        format.html { redirect_to lobby_url(@lobby), notice: "Lobby was successfully created." }
+        format.html { redirect_to edit_lobby_url(@lobby), notice: "Lobby was successfully created." }
         format.json { render :show, status: :created, location: @lobby }
       else
         format.html { render :new, status: :unprocessable_entity }
