@@ -4,8 +4,8 @@
   <% @lobbies.each do |lobby| %>
     <li class="lobby">
       <%= render lobby do %>
-        <%= button_to "Join", lobby, method: :get %>
-    <% end %>
+        <%= button_to "Join", lobby, method: :get, form: { style: "grid-row: 1;" } %>
+      <% end %>
     </li>
   <% end %>
   <li class="lobby">

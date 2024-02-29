@@ -2,8 +2,8 @@
 
 <header id="<%= dom_id @lobby %>" class="lobby">
   <%= render @lobby do %>
-    <%= button_to "Edit", edit_lobby_path(@lobby), method: :get %>
-    <%= button_to "Exit", lobbies_path(@lobby), method: :get %>
+    <%= button_to "Edit", edit_lobby_path(@lobby), method: :get, form: { style: "grid-row: 1;" } %>
+    <%= button_to "Exit", lobbies_path(@lobby), method: :get, form: { style: "grid-row: 1;" } %>
   <% end %>
 </header>
 
