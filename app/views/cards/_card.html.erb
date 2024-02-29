@@ -1,14 +1,11 @@
-<header id="<%= dom_id card %>">
-  <p>
-    <strong>Lobby:</strong>
-    <%= link_to card.lobby.title, lobby_path(card.lobby) %>
-  </p>
+<div class="lobby">
+  <%= card.lobby.title %>
+</div>
 
-  <div class="player">
-    <%= card.title %>
-    <%= button_to "Edit", edit_lobby_card_path(@lobby, @card), method: :get %>
-    <%= button_to "Exit", lobby_path(@lobby), method: :get %>
-  </div>
-</header>
+<div class="player">
+  <%= card.title %>
+  <%= button_to "Edit", edit_lobby_card_path(@lobby, @card), method: :get %>
+  <%= button_to "Exit", lobby_path(@lobby), method: :get %>
+</div>
 
 <%= render "tiles", tiles: card.tiles %>
