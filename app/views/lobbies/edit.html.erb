@@ -1,6 +1,6 @@
 <h2>Editing lobby</h2>
 
-<p style="color: green"><%= notice %></p>
+<% if notice %><p style="color: green"><%= notice %></p><% end %>
 
 <%= render "form", lobby: @lobby %>
 
