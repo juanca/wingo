@@ -14,7 +14,7 @@
 <ul>
   <% @lobby.cards.each do |card| %>
     <li>
-      <%= link_to card.title, [@lobby, card] %>
+      <%= link_to card.title.presence || "No name", [@lobby, card] %>
     </li>
   <% end %>
 </ul>
