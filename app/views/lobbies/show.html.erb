@@ -11,7 +11,7 @@
 
 <p>Players: <%= @lobby.cards.count %></p>
 
-<ul>
+<ul id="players">
   <% @lobby.cards.each do |card| %>
     <li>
       <%= link_to card.title.presence || "No name", [@lobby, card] %>

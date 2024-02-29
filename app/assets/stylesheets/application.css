@@ -71,6 +71,18 @@ ul {
   }
 }
 
+#players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  & li {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+  }
+}
+
 #tiles {
   display: flex;
   flex-wrap: wrap;
