@@ -41,17 +41,16 @@ ul {
 }
 
 #lobbies {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  grid-template-columns: max-content max-content;
 
   & li {
     background-color: aliceblue;
     border: 1px solid black;
-    border-radius: 3px;
+    border-radius: 0.5rem;
+    column-gap: 1rem;
     display: grid;
-    grid-column: span 2;
-    grid-template-columns: subgrid;
     padding: 0.5rem;
 
     & b {
