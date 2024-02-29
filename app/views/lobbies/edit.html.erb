@@ -1,14 +1,10 @@
-<h2>Editing lobby</h2>
-
 <% if notice %><p style="color: green"><%= notice %></p><% end %>
 
-<%= render "form", lobby: @lobby %>
-
-<div class="actions">
+<%= render "form", lobby: @lobby do %>
   <%= button_tag "Update", form: "form" %>
   <%= button_to "Destroy", @lobby, method: :delete %>
   <%= button_to "Cancel", @lobby, method: :get %>
-</div>
+<% end %>
 
 <h2>Tiles availables for new cards:</h2>
 

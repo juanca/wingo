@@ -1,8 +1,4 @@
-<h2>New lobby</h2>
-
-<%= render "form", lobby: @lobby %>
-
-<div class="actions">
+<%= render "form", lobby: @lobby do %>
   <%= button_tag "Create", form: "form" %>
   <%= button_to "Cancel", lobbies_path, method: :get %>
-</div>
+<% end %>
