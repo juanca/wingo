@@ -7,7 +7,7 @@ class CardsTest < ApplicationSystemTestCase
 
   test "should create card" do
     visit lobby_url(@card.lobby)
-    click_on "Join the game!"
+    click_on "+ Join the game!"
 
     fill_in "Title", with: @card.title
     click_on "Create Card"
