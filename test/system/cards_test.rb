@@ -10,7 +10,7 @@ class CardsTest < ApplicationSystemTestCase
     click_on "+ Join the game!"
 
     fill_in "Title", with: @card.title
-    click_on "Create Card"
+    click_on "Create"
 
     assert_text "Card was successfully created"
   end
@@ -20,7 +20,7 @@ class CardsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Title", with: @card.title
-    click_on "Update Card"
+    click_on "Update"
 
     assert_text "Card was successfully updated"
   end
@@ -28,7 +28,7 @@ class CardsTest < ApplicationSystemTestCase
   test "should destroy Card" do
     visit lobby_card_url(@card.lobby, @card)
     click_on "Edit", match: :first
-    click_on "Destroy this card", match: :first
+    click_on "Destroy", match: :first
 
     assert_text "Card was successfully destroyed"
   end

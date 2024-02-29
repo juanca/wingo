@@ -16,12 +16,12 @@
 
 <ul id="players">
   <% @lobby.cards.each do |card| %>
-    <li>
+    <li class="player">
       <%= link_to card.title.presence || "No name", [@lobby, card] %>
     </li>
   <% end %>
   <% if @lobby.tiles.count >= 24 %>
-    <li>
+    <li class="player">
       <%= link_to "+ Join the game!", new_lobby_card_path(@lobby) %>
     </li>
   <% end %>

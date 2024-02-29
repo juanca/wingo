@@ -4,12 +4,11 @@
     <%= link_to card.lobby.title, lobby_path(card.lobby) %>
   </p>
 
-  <p>
-    <strong>Player:</strong>
+  <div class="player">
     <%= card.title %>
-  </p>
-
-  <%= button_to "Edit", edit_lobby_card_path(@lobby, @card), method: :get %>
+    <%= button_to "Edit", edit_lobby_card_path(@lobby, @card), method: :get %>
+    <%= button_to "Exit", lobby_path(@lobby), method: :get %>
+  </div>
 </header>
 
 <%= render "tiles", tiles: card.tiles %>

@@ -1,10 +1,5 @@
-<h2>Editing card</h2>
-
-<%= render "form", card: @card %>
-
-<br>
-
-<div>
-  <%= link_to "Back to card", [@lobby, @card] %>
-  <%= button_to "Destroy this card", [@lobby, @card], method: :delete %>
-</div>
+<%= render "form", card: @card do %>
+  <%= button_tag "Update", form: "form" %>
+  <%= button_to "Destroy", [@lobby, @card], method: :delete %>
+  <%= button_to "Cancel", [@lobby, @card], method: :get %>
+<% end %>

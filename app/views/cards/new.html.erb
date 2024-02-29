@@ -1,10 +1,5 @@
-<h2>New card</h2>
-
-<%= render "form", card: @card %>
+<%= render "form", card: @card do %>
+  <%= button_tag "Create", form: "form" %>
+  <%= button_to "Cancel", lobby_path(@lobby), method: :get %>
+<% end %>
 <%= render "tiles", tiles: @card.tiles %>
-
-<br>
-
-<div>
-  <%= link_to "Back to lobby", lobby_path(@lobby) %>
-</div>
