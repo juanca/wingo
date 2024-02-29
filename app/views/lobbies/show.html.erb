@@ -7,14 +7,14 @@
   <% end %>
 </header>
 
-<p style="color: red">
-  <% if @lobby.tiles.count < 24 %>
+<% if @lobby.tiles.count < 24 %>
+  <p style="color: red">
     Lobby requires more tiles before creating players.
     Press "Edit" to create more tiles.
-  <% else %>
-    <%= button_to "Join the game!", new_lobby_card_path(@lobby), method: :get %>
-  <% end %>
-</p>
+  </p>
+<% else %>
+  <%= button_to "Join the game!", new_lobby_card_path(@lobby), method: :get %>
+<% end %>
 
 <ul id="players">
   <% @lobby.cards.each do |card| %>
