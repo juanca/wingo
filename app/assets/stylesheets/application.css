@@ -43,7 +43,7 @@ ul {
 #lobbies {
   display: grid;
   gap: 1rem;
-  grid-template-columns: auto auto;
+  grid-template-columns: max-content max-content;
 
   & li {
     background-color: aliceblue;
