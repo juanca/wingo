@@ -2,10 +2,10 @@
 
 <ul id="lobbies">
   <% @lobbies.each do |lobby| %>
-    <li>
-      <b><%= lobby.title %></b>
-      <i>Players: <%= lobby.cards.count %></i>
-      <%= button_to "Join", lobby, method: :get %>
+    <li class="lobby">
+      <%= render lobby do %>
+        <%= button_to "Join", lobby, method: :get %>
+    <% end %>
     </li>
   <% end %>
 </ul>

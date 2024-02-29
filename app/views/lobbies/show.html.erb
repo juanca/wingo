@@ -1,12 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<header id="<%= dom_id @lobby %>">
-  <p>
-    <strong>Lobby name:</strong>
-    <%= @lobby.title %>
-  </p>
-  <%= button_to "Edit", edit_lobby_path(@lobby), method: :get %>
-  <%= button_to "Exit", lobbies_path(@lobby), method: :get %>
+<header id="<%= dom_id @lobby %>" class="lobby">
+  <%= render @lobby do %>
+    <%= button_to "Edit", edit_lobby_path(@lobby), method: :get %>
+    <%= button_to "Exit", lobbies_path(@lobby), method: :get %>
+  <% end %>
 </header>
 
 <p style="color: red">
@@ -14,12 +12,9 @@
     Lobby requires more tiles before creating players.
     Press "Edit" to create more tiles.
   <% else %>
-    <p>Players: <%= @lobby.cards.count %></p>
     <%= button_to "Join the game!", new_lobby_card_path(@lobby), method: :get %>
   <% end %>
 </p>
-
-
 
 <ul id="players">
   <% @lobby.cards.each do |card| %>
