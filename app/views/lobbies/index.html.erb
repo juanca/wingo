@@ -8,6 +8,7 @@
     <% end %>
     </li>
   <% end %>
+  <li class="lobby">
+    <%= link_to "+ New lobby", new_lobby_path %>
+  </li>
 </ul>
-
-<%= button_to "New lobby", new_lobby_path, method: :get, form: { style: "margin-top: 1rem;" } %>
