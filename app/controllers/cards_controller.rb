@@ -62,7 +62,7 @@ class CardsController < ApplicationController
     end
 
     def set_card
-      @card = Card.find(params[:id])
+      @card = Card.preload(:card_tiles, :tiles).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

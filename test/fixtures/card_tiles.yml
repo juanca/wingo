@@ -3,3 +3,8 @@
 one:
   card: one
   tile: one
+
+two:
+  card: one
+  tile: three
+  marked: true

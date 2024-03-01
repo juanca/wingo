@@ -4,9 +4,17 @@
   <div>N</div>
   <div>G</div>
   <div>O</div>
-  <% tiles.each.with_index do |tile, index| %>
-    <div class="tile">
-      <%= tile.body %>
-    </div>
+  <% if card.persisted? %>
+    <% card.card_tiles.each.with_index do |card_tile| %>
+      <%= button_to [@lobby, card, card_tile.tile], class: ["tile", card_tile.marked && "marked"], method: :patch, params: { tile: { marked: !card_tile.marked } } do %>
+        <%= card_tile.tile.body %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <% card.tiles.each.with_index do |tile| %>
+      <div class="tile">
+        <%= tile.body %>
+      </div>
+    <% end %>
   <% end %>
 </div>

@@ -2,4 +2,4 @@
   <%= button_tag "Create", form: "form" %>
   <%= button_to "Cancel", lobby_path(@lobby), method: :get %>
 <% end %>
-<%= render "tiles", tiles: @card.tiles %>
+<%= render "tiles", card: @card %>

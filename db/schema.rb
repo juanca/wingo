@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_26_233238) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_29_232113) do
   create_table "card_tiles", force: :cascade do |t|
     t.integer "card_id", null: false
     t.integer "tile_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "marked"
     t.index ["card_id"], name: "index_card_tiles_on_card_id"
     t.index ["tile_id"], name: "index_card_tiles_on_tile_id"
   end
