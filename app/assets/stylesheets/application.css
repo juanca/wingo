@@ -93,10 +93,6 @@ ul {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-
-  .new {
-    width: calc(150px + 1rem);
-  }
 }
 
 .tile {
@@ -110,6 +106,12 @@ ul {
   justify-content: space-around;
   text-align: center;
   width: 75px;
+
+  &.new {
+    aspect-ratio: 2 / 1;
+    height: 75px;
+    width: calc(150px + 1rem);
+  }
 
   &.marked {
     opacity: 25%;
