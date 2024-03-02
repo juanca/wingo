@@ -1,5 +1,7 @@
 <% if notice %><p style="color: green"><%= notice %></p><% end %>
 
+<h2>Lobby</h2>
+
 <header id="<%= dom_id @lobby %>" class="lobby">
   <%= render @lobby do %>
     <%= button_to "Edit", edit_lobby_path(@lobby), method: :get, form: { style: "grid-row: 1;" } %>
@@ -14,6 +16,7 @@
   </p>
 <% end %>
 
+<h2>Winners</h2>
 <ul id="players">
   <% @lobby.cards.winners.each do |card| %>
     <li class="player winner">
@@ -22,6 +25,7 @@
   <% end %>
 </ul>
 
+<h2>Players</h2>
 <ul id="players">
   <% @lobby.cards.each do |card| %>
     <li class="player">

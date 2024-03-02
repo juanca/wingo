@@ -1,3 +1,11 @@
+<h2>Lobby</h2>
+
+<div class="lobby">
+  <%= @lobby.title %>
+</div>
+
+<h2>Card</h2>
+
 <%= render "form", card: @card do %>
   <%= button_tag "Update", form: "form" %>
   <%= button_to "Destroy", [@lobby, @card], method: :delete %>

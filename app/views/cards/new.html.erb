@@ -1,5 +1,14 @@
+<h2>Lobby</h2>
+
+<div class="lobby">
+  <%= @lobby.title %>
+</div>
+
+<h2>Card</h2>
+
 <%= render "form", card: @card do %>
   <%= button_tag "Create", form: "form" %>
   <%= button_to "Cancel", lobby_path(@lobby), method: :get %>
 <% end %>
+
 <%= render "tiles", card: @card %>
