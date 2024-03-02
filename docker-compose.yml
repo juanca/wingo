@@ -1,14 +1,26 @@
 version: "3"
 services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: wingo
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db:/var/lib/postgresql/data
+      - socket:/var/run/postgresql
   app:
     image: ruby:latest
     command: ./bin/rails server -b 0.0.0.0
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PASSWORD: password
     ports:
       - "3000:3000"
     volumes:
       - .:/root/wingo
       - fly:/root/.fly
       - bundle:/usr/local/bundle
+      - socket:/var/run/postgresql
     working_dir: "/root/wingo"
   selenium:
     image: selenium/standalone-chrome:latest
@@ -18,4 +30,6 @@ services:
     shm_size: "2g"
 volumes:
   bundle:
+  db:
   fly:
+  socket:
