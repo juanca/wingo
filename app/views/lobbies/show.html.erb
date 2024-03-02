@@ -15,9 +15,17 @@
 <% end %>
 
 <ul id="players">
+  <% @lobby.cards.winners.each do |card| %>
+    <li class="player winner">
+      <%= link_to card.title, [@lobby, card] %>
+    </li>
+  <% end %>
+</ul>
+
+<ul id="players">
   <% @lobby.cards.each do |card| %>
     <li class="player">
-      <%= link_to card.title.presence || "No name", [@lobby, card] %>
+      <%= link_to card.title, [@lobby, card] %>
     </li>
   <% end %>
   <% if @lobby.tiles.count >= 24 %>

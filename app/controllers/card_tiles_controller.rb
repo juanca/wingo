@@ -4,8 +4,14 @@ class CardTilesController < ApplicationController
   def update
     respond_to do |format|
       if @card_tile.update(card_tile_params)
-        format.html { redirect_to lobby_card_url(@lobby, @card), notice: "Card was successfully updated." }
-        format.json { render :show, status: :ok, location: @card }
+        if @card.has_won? && @card.update({ won_at: DateTime.now })
+          format.html { redirect_to lobby_card_url(@lobby, @card), notice: "Card is a winner!" }
+          format.json { render :show, status: :ok, location: @card }
+        else
+          format.html { redirect_to lobby_card_url(@lobby, @card), notice: "Card was successfully updated." }
+          format.json { render :show, status: :ok, location: @card }
+        end
+
       else
         format.html { redirect_to lobby_card_url(@lobby, @card), notice: "Card was not updated.", status: :unprocessable_entity }
         format.json { render json: @card_tile.errors, status: :unprocessable_entity }

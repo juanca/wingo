@@ -76,6 +76,10 @@ ul {
   width: fit-content;
 }
 
+.winner {
+  background-color: lawngreen;
+}
+
 #tiles {
   align-items: center;
   background-color: ghostwhite;

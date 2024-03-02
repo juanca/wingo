@@ -2,7 +2,7 @@ require "test_helper"
 
 class TilesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @tile = tiles(:two)
+    @tile = tiles(:orphan)
   end
 
   test "should get new" do

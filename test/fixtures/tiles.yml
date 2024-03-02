@@ -4,6 +4,10 @@ free:
   lobby: one
   body: FREE
 
+orphan:
+  lobby: one
+  body: orphan
+
 one:
   lobby: one
   body: 1
@@ -84,18 +88,18 @@ twenty:
   lobby: one
   body: 20
 
-twenty-one:
+twenty_one:
   lobby: one
   body: 21
 
-twenty-two:
+twenty_two:
   lobby: one
   body: 22
 
-twenty-three:
+twenty_three:
   lobby: one
   body: 23
 
-twenty-four:
+twenty_four:
   lobby: one
   body: 24

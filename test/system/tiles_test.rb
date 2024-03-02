@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class TilesTest < ApplicationSystemTestCase
   setup do
-    @tile = tiles(:two)
+    @tile = tiles(:orphan)
   end
 
   test "should create tile" do

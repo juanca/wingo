@@ -6,5 +6,120 @@ one:
 
 two:
   card: one
-  tile: three
+  tile: two
   marked: true
+
+three:
+  card: one
+  tile: three
+  marked: false
+
+four:
+  card: one
+  tile: four
+  marked: false
+
+five:
+  card: one
+  tile: five
+  marked: false
+
+six:
+  card: one
+  tile: six
+  marked: false
+
+seven:
+  card: one
+  tile: seven
+  marked: false
+
+eight:
+  card: one
+  tile: eight
+  marked: false
+
+nine:
+  card: one
+  tile: nine
+  marked: false
+
+ten:
+  card: one
+  tile: ten
+  marked: false
+
+eleven:
+  card: one
+  tile: eleven
+  marked: false
+
+twelve:
+  card: one
+  tile: twelve
+  marked: false
+
+thirteen:
+  card: one
+  tile: thirteen
+  marked: false
+
+fourteen:
+  card: one
+  tile: fourteen
+  marked: false
+
+fifteen:
+  card: one
+  tile: fifteen
+  marked: false
+
+sixteen:
+  card: one
+  tile: sixteen
+  marked: false
+
+seventeen:
+  card: one
+  tile: seventeen
+  marked: false
+
+eighteen:
+  card: one
+  tile: eighteen
+  marked: false
+
+nineteen:
+  card: one
+  tile: nineteen
+  marked: false
+
+twenty:
+  card: one
+  tile: twenty
+  marked: false
+
+twenty_one:
+  card: one
+  tile: twenty_one
+  marked: false
+
+twenty_two:
+  card: one
+  tile: twenty_two
+  marked: false
+
+twenty_three:
+  card: one
+  tile: twenty_three
+  marked: false
+
+twenty_four:
+  card: one
+  tile: twenty_four
+  marked: false
+
+twenty_five:
+  card: one
+  tile: free
+  marked: false

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_29_232113) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_01_231105) do
   create_table "card_tiles", force: :cascade do |t|
     t.integer "card_id", null: false
     t.integer "tile_id", null: false
@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_232113) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "won_at"
     t.index ["lobby_id"], name: "index_cards_on_lobby_id"
   end
 
