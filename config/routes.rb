@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'card_tiles/update'
   resources :lobbies do
+    post :generate_tiles, on: :member
     resources :tiles, except: [:index, :show]
     resources :cards, except: [:index] do
       resources :tiles, controller: :card_tiles, only: [:update]

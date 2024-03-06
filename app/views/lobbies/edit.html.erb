@@ -20,3 +20,9 @@
     <div class="new tile">Add new tile</div>
   <% end %>
 </div>
+
+<%= form_tag(controller: "lobbies", action: "generate_tiles") do %>
+  <%= label_tag "Automatically generate number of tiles:" %>
+  <%= number_field_tag :count %>
+  <%= submit_tag %>
+<% end %>

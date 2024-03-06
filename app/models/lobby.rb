@@ -7,4 +7,8 @@ class Lobby < ApplicationRecord
   after_create do
     Tile.new(lobby_id: self.id, body: "FREE").save!
   end
+
+  def generate_tiles(count)
+    self.tiles << Array.new(count).fill { |index| Tile.new(body: index + 1) }
+  end
 end

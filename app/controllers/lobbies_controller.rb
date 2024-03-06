@@ -1,5 +1,5 @@
 class LobbiesController < ApplicationController
-  before_action :set_lobby, only: %i[ show edit update destroy ]
+  before_action :set_lobby, only: %i[ show edit update destroy generate_tiles ]
 
   # GET /lobbies or /lobbies.json
   def index
@@ -47,6 +47,18 @@ class LobbiesController < ApplicationController
     end
   end
 
+  def generate_tiles
+    respond_to do |format|
+      if @lobby.generate_tiles(generate_tiles_params[:count].to_i)
+        format.html { redirect_to edit_lobby_url(@lobby), notice: "Tiles were successfully generated." }
+        format.json { render :show, status: :ok, location: @lobby }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: "Tiles were not generated.", status: :unprocessable_entity }
+      end
+    end
+  end
+
   # DELETE /lobbies/1 or /lobbies/1.json
   def destroy
     @lobby.destroy!
@@ -66,5 +78,9 @@ class LobbiesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def lobby_params
       params.require(:lobby).permit(:title)
+    end
+
+    def generate_tiles_params
+      params.permit(:count)
     end
 end
