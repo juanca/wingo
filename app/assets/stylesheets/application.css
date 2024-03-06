@@ -32,6 +32,16 @@ h2 {
   margin: 0;
 }
 
+.notice {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  color: green;
+  position: fixed;
+  padding: 0.5rem;
+  right: 1rem;
+}
+
 .actions {
   display: flex;
   gap: 1rem;
