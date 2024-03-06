@@ -32,6 +32,17 @@ h2 {
   margin: 0;
 }
 
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
 .notice {
   background-color: white;
   border: 1px solid grey;
@@ -40,6 +51,7 @@ h2 {
   position: fixed;
   padding: 0.5rem;
   right: 1rem;
+  animation: 5s ease-in forwards fade;
 }
 
 .actions {
